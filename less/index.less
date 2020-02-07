@@ -53,8 +53,26 @@ table {
     box-sizing: border-box;
 }
 
+@font-para: 1.03rem;
+@font-c: rebeccapurple;
+@font-face: 'Jim Nightshade', cursive;
+
+.box-class {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.font-class {
+	font-size: 3rem;
+	font-family: @font-face;
+	text-align: center;
+	text-decoration: underline;
+  }
+
+
 html {
-	background-color: yellow;
+	background-color: lightblue;
 }
 
 body {
@@ -64,78 +82,204 @@ body {
 nav {
 	display: flex;
 	justify-content: space-around;
-	font-size: 1.03rem;
+	font-family: @font-face;
+	font-size: 2rem;
+	background-color: gray;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	
 	a {
 		text-decoration: none;
+		color:  rebeccapurple;
 	}
 }
 
 .main {
 	display: flex;
 	justify-content: space-around;
+	
+	@media (max-width: 500px){
+		display: flex;
+		flex-direction: column;
+		width: 150%;
+	}
 
 	.main-content {
-		font-size: 4rem;
-		font-family: 'Jim Nightshade', cursive;
-		border: 1px solid red;
+		display: flex;
+		flex-direction: column;
+		font-family: @font-face;
+
+		@media (max-width: 500px){
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 140%;
+		}
+
+		h1 {
+			.box-class();
+			font-size: 4rem;
+		}
+
+			@media (max-width: 500px){
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 40%;
+			}
+
+		}
 
 		p {
-			color: rebeccapurple;
-			margin: 2rem;
-	}
-}
+			color: @font-c;
+			font-size: 4rem;
+			font-family: 'Amatic SC', cursive;
+			margin-top: 1rem;
+		}
 
-.content-one {
-	display: flex;
-	justify-content: space-around;
-	margin-top: 4rem;
-	margin-bottom: 50px;
+		.contact {
+			font-size: @font-para;
+			margin-top: 2rem;
 
-	p {
-		font-size: 50px;
+			h3{
+				font-size: 2rem;
+			}
+
+			li {
+				margin-top: 2rem;
+			}
+		}
 	}
-}
 
 
 .introduction {
 	display: flex;
-	border: 1px solid red;
 	justify-content: space-around;
+	margin-top: 3rem;
+	border: 2px solid gray;
+  	padding: 10px;
+	border-top-right-radius: 5rem;
+	background-color: gray;
 
+	@media (max-width: 500px){
+		width: 100%;
+		padding: 2rem;
+	}
+
+	.about {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 500px){
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 40%;
+			margin-left: 1rem;
+
+		}
+
+		p {
+			font-family: @font-face;
+			font-size: @font-para;
+			margin-left: 3rem;
+		}
+
+	}
+	
 	h2 {
-		font-size: 3rem;
-		text-align: center;
-		text-decoration: underline;
+		.font-class();
 		margin-bottom: 0.75rem;
 		margin-top: 0.75rem;
+		}
 	}
+
+
+.facts {
+	display: flex;
+	justify-content: center;
+
+	@media (max-width: 500px){
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 3rem;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		font-family: @font-face;
+		font-size: @font-para;
+		margin-left: 3rem;
+		justify-content: center;
+		align-items: center;
+
+	}
+}
 
 .work-history {
 	display: flex;
 	justify-content: space-around;
+	margin-top: 5rem;
+	border: 2px solid gray;
+  	padding: 10px;
+	border-bottom-left-radius: 5rem;
+	background-color: gray;
+
+	@media (max-width: 500px){
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-top: 2rem;
+	}
 
 	h2 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		font-size: 3rem;
-
-	}
-
-	.jobs {
-		flex: 1;
-		font-size: 1.5rem;
-		margin-left: 3rem;
-		padding: 0rem;
-
-		h3 {
-			text-decoration: underline;
-		}
+		font-family: @font-face;
+		text-decoration: underline;
 	}
 }
+
+	.jobs {
+		font-size: 1.5rem;
+		margin-left: 1rem;
+
+		h3 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-decoration: underline;
+			font-family: @font-face;
+			color: rebeccapurple
+
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-family: @font-face;
+			margin-top: 1rem;
+
+		}
+	}
 
 footer {
 	display: flex;
 	justify-content: center;
+	font-family: @font-face;
 	font-size: 1.2rem;
-	margin-top: 7rem;
-	margin-bottom: 2rem;
+	margin-top: 5rem;
+
 }
+

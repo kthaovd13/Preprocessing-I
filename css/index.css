@@ -130,8 +130,19 @@ table {
 * {
   box-sizing: border-box;
 }
+.box-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.font-class {
+  font-size: 3rem;
+  font-family: 'Jim Nightshade', cursive;
+  text-align: center;
+  text-decoration: underline;
+}
 html {
-  background-color: ;
+  background-color: lightblue;
 }
 body {
   height: 100%;
@@ -139,75 +150,186 @@ body {
 nav {
   display: flex;
   justify-content: space-around;
-  font-size: 1.03rem;
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  font-family: 'Jim Nightshade', cursive;
+  font-size: 2rem;
+  background-color: gray;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 nav a {
   text-decoration: none;
+  color: rebeccapurple;
 }
 .main {
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 500px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 150%;
+  }
+}
 .main .main-content {
-  flex-direction: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Jim Nightshade', cursive;
+}
+@media (max-width: 500px) {
+  .main .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 140%;
+  }
+}
+.main .main-content h1 {
+  display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 4rem;
-  font-family: 'Quicksand', sans-serif;
-  border: 1px solid red;
 }
-.main .main-content p {
+@media (max-width: 500px) {
+  .main .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+  }
+}
+.main p {
   color: rebeccapurple;
-  margin: 2rem;
+  font-size: 4rem;
+  font-family: 'Amatic SC', cursive;
+  margin-top: 1rem;
 }
-.content-one {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 4rem;
-  margin-bottom: 50px;
+.main .contact {
+  font-size: 1.03rem;
+  margin-top: 2rem;
 }
-.content-one p {
-  font-size: 50px;
+.main .contact h3 {
+  font-size: 2rem;
+}
+.main .contact li {
+  margin-top: 2rem;
 }
 .introduction {
   display: flex;
-  border: 1px solid red;
   justify-content: space-around;
+  margin-top: 3rem;
+  border: 2px solid gray;
+  padding: 10px;
+  border-top-right-radius: 5rem;
+  background-color: gray;
+}
+@media (max-width: 500px) {
+  .introduction {
+    width: 100%;
+    padding: 2rem;
+  }
+}
+.introduction .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .introduction .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-left: 1rem;
+  }
+}
+.introduction .about p {
+  font-family: 'Jim Nightshade', cursive;
+  font-size: 1.03rem;
+  margin-left: 3rem;
 }
 .introduction h2 {
-  font-size: 50px;
+  font-size: 3rem;
+  font-family: 'Jim Nightshade', cursive;
   text-align: center;
   text-decoration: underline;
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
 }
-.introduction h2 .about p {
-  text-align: center;
+.facts {
+  display: flex;
+  justify-content: center;
 }
-.introduction h2 .about p .facts {
-  text-align: center;
+@media (max-width: 500px) {
+  .facts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3rem;
+  }
+}
+.facts ul {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Jim Nightshade', cursive;
+  font-size: 1.03rem;
+  margin-left: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 .work-history {
   display: flex;
   justify-content: space-around;
+  margin-top: 5rem;
+  border: 2px solid gray;
+  padding: 10px;
+  border-bottom-left-radius: 5rem;
+  background-color: gray;
+}
+@media (max-width: 500px) {
+  .work-history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
 }
 .work-history h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 3rem;
-}
-.work-history .jobs {
-  flex: 1;
-  font-size: 1.5rem;
-  margin-left: 3rem;
-  padding: 0rem;
-}
-.work-history .jobs h3 {
+  font-family: 'Jim Nightshade', cursive;
   text-decoration: underline;
+}
+.jobs {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.jobs h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: underline;
+  font-family: 'Jim Nightshade', cursive;
+  color: rebeccapurple;
+}
+.jobs ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Jim Nightshade', cursive;
+  margin-top: 1rem;
 }
 footer {
   display: flex;
   justify-content: center;
+  font-family: 'Jim Nightshade', cursive;
   font-size: 1.2rem;
-  margin-top: 7rem;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
 }
